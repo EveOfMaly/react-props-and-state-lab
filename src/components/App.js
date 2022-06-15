@@ -35,24 +35,23 @@ class App extends React.Component {
     // put it back into the array
     pets[foundID] = found
 
-    //set the state of the new copy
-    this.setState({pets})
+    // set the state of the new copy
+    // this.setState({pets})
 
 
 
-    // this.setState((previousState) => {
-    //   return {
-    //     pets: this.state.pets.splice(foundID)
-    //   }
-    // });
+    this.setState((previousState) => {
+      return {
+        pets: this.state.pets.splice(foundID)
+      }
+    });
 
-    // this.setState((previousState) => {
-    //   return {
-    //     pets: this.state.pets.splice(foundID, 0, found )
-    //   }
-    // })
+    this.setState((previousState) => {
+      return {
+        pets: this.state.pets.splice(foundID, 0, found )
+      }
+    })
     
-    console.log(this.state.pets)
 
 
   }
